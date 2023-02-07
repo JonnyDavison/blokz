@@ -11,9 +11,12 @@ class brick {
         this.topRight = [xAxis + brickHeight, yAxis + brickHeight]
     }
 }
+// Make multiple bricks
+let bricks = [
+    new brick(10, 280)
+]
 
 //Draw brick
- 
 function makeBrick() {
     let brick = document.createElement('div');
     brick.classList.add('brick')
