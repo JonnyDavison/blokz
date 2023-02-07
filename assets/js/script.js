@@ -15,14 +15,17 @@ class brick {
 let bricks = [
     new brick(10, 280)
 ]
+console.log(bricks[0])
 
 //Draw brick
-function makeBrick() {
-    let brick = document.createElement('div');
-    brick.classList.add('brick')
-    brick.style.left = '50px'
-    brick.style.bottom = '50px'
-    grid.appendChild(brick)
-}
+// function makeBrick() {
+//     for (let i=0; i < bricks.length; i++ ) {
+//         let brick = document.createElement('div');
+//         brick.classList.add('brick')
+//         brick.style.left = bricks[i].bottomLeft[0]
+//         brick.style.bottom = '50px'
+//         grid.appendChild(brick)
+//     }
+// }
 
-makeBrick()
+// makeBrick()
