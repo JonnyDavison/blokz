@@ -1,0 +1,15 @@
+
+/*Creates game area*/
+.grid {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    border: solid black 1px;
+}
+/*Creates blocks */
+.brick {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: blueviolet;
+}
