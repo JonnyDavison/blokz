@@ -63,6 +63,10 @@ function moveSlider(event){
             sliderStart[0] -= 10
             slider.style.left = sliderPosition[0] + 'px'
             break;
+        case 'ArrowRight':
+            sliderStart[0] +=10
+            slider.style.right = sliderPosition[0] + 'px'
+            break;
     }
 }
 
