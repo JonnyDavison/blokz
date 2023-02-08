@@ -43,3 +43,10 @@ function makeBrick() {
 }
 
 makeBrick()
+
+
+// Create User
+
+let slider = document.createElement('div');
+slider.classList.add('slider');
+grid.appendChild(slider)

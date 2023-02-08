@@ -13,3 +13,9 @@
     height: 20px;
     background-color: blueviolet;
 }
+.slider {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: green;
+}
