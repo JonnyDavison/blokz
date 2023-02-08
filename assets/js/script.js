@@ -2,6 +2,8 @@ let grid = document.querySelector('.grid')
 const brickWidth = '100px'
 const brickHeight = '20px'
 
+let sliderStart = [230, 10]
+
 // Create Brick
 class brick {
     constructor(xAxis, yAxis) {
@@ -45,8 +47,10 @@ function makeBrick() {
 makeBrick()
 
 
-// Create User
+// Create slider
 
 let slider = document.createElement('div');
 slider.classList.add('slider');
+slider.style.left = sliderStart[0] + 'px'
+slider.style.bottom = sliderStart[1] + 'px'
 grid.appendChild(slider)
