@@ -3,6 +3,7 @@ const brickWidth = '100px'
 const brickHeight = '20px'
 
 let sliderStart = [230, 10]
+let sliderPosition = sliderStart
 
 // Create Brick
 class brick {
@@ -48,9 +49,21 @@ makeBrick()
 
 
 // Create slider
-
 let slider = document.createElement('div');
 slider.classList.add('slider');
 slider.style.left = sliderStart[0] + 'px'
 slider.style.bottom = sliderStart[1] + 'px'
 grid.appendChild(slider)
+
+
+//Slider movement 
+function moveSlider(event){
+    switch(event.key) {
+        case 'ArrowLeft':
+            sliderStart[0] -= 10
+            slider.style.left = sliderPosition[0] + 'px'
+            break;
+    }
+}
+
+document.addEventListener('keydown', moveSlider)
