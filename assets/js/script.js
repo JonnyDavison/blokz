@@ -2,8 +2,13 @@ let grid = document.querySelector('.grid')
 const brickWidth = '100px'
 const brickHeight = '20px'
 
-let sliderStart = [230, 10]
-let sliderPosition = sliderStart
+// Slider Starting point
+let sliderStart = [230, 10];
+let sliderPosition = sliderStart;
+
+// Ball starting point
+let ballStart = [270, 30]
+let ballPosition = ballStart;
 
 // Create Brick
 class brick {
@@ -57,17 +62,24 @@ grid.appendChild(slider)
 
 
 //Slider movement 
-function moveSlider(event){
-    switch(event.key) {
+function moveSlider(event) {
+    switch (event.key) {
         case 'ArrowLeft':
             sliderStart[0] -= 10
             slider.style.left = sliderPosition[0] + 'px'
             break;
         case 'ArrowRight':
-            sliderStart[0] +=10
+            sliderStart[0] += 10
             slider.style.right = sliderPosition[0] + 'px'
             break;
     }
 }
 
-document.addEventListener('keydown', moveSlider)
+document.addEventListener('keydown', moveSlider);
+
+// Create ball
+let ball = document.createElement('div');
+ball.classList.add('ball')
+grid.appendChild(ball)
+ball.style.left = ballStart[0] + 'px'
+ball.style.bottom = ballStart[1] + 'px'
