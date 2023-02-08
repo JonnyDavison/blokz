@@ -1,6 +1,5 @@
 let grid = document.querySelector('.grid')
-const brickWidth = '100px'
-const brickHeight = '20px'
+
 
 // Slider Starting point
 let sliderStart = [230, 10];
@@ -8,9 +7,12 @@ let sliderPosition = sliderStart;
 
 // Ball starting point
 let ballStart = [270, 30]
-let ballPosition = ballStart;
+
 
 // Create Brick
+const brickWidth = '100px'
+const brickHeight = '20px'
+
 class brick {
     constructor(xAxis, yAxis) {
         this.bottomLeft = [xAxis, yAxis]
@@ -79,7 +81,18 @@ document.addEventListener('keydown', moveSlider);
 
 // Create ball
 let ball = document.createElement('div');
-ball.classList.add('ball')
-grid.appendChild(ball)
-ball.style.left = ballStart[0] + 'px'
-ball.style.bottom = ballStart[1] + 'px'
+ball.classList.add('ball');
+grid.appendChild(ball);
+ball.style.left = ballStart[0] + 'px';
+ball.style.bottom = ballStart[1] + 'px';
+
+
+//Ball movement
+function moveBall() {
+    ball.ballStart[0] += 2;
+    ball.ballStart[1] += 2;
+    ball.style.left = ballStart[0] + 'px';
+    ball.style.bottom = ballStart[1] + 'px';
+}
+
+setInterval(moveBall, 30);
