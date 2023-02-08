@@ -7,6 +7,7 @@ let sliderPosition = sliderStart;
 
 // Ball starting point
 let ballStart = [270, 30]
+let ballPosition = ballStart
 
 
 // Create Brick
@@ -89,10 +90,10 @@ ball.style.bottom = ballStart[1] + 'px';
 
 //Ball movement
 function moveBall() {
-    ball.ballStart[0] += 2;
-    ball.ballStart[1] += 2;
+    ballPosition[0] += 2;
+    ballPosition[1] += 2;
     ball.style.left = ballStart[0] + 'px';
     ball.style.bottom = ballStart[1] + 'px';
 }
 
-setInterval(moveBall, 30);
+setInterval(moveBall, 30)
