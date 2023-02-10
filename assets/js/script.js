@@ -1,15 +1,15 @@
 // Variables
 let grid = document.querySelector('.grid')
-let gridWidth = '300px'
-let gridHeight = '560px'
+let gridWidth = 300
+let gridHeight = 560
 // Create Brick
-const brickWidth = '100px'
-const brickHeight = '20px'
+const brickWidth = 100
+const brickHeight = 20
 // Slider Starting point
 let sliderStart = [230, 10];
 let sliderPosition = sliderStart;
 //Ball
-let ballWidth = '15px'
+let ballWidth = 15
 // Ball starting point
 let ballStart = [270, 30]
 let ballPosition = ballStart
@@ -95,8 +95,8 @@ ball.style.bottom = ballStart[1] + 'px';
 
 //Ball movement
 function moveBall() {
-    ballPosition[0] += 2;
-    ballPosition[1] += 2;
+    ballPosition[0] += xMove;
+    ballPosition[1] += yMove;
     ball.style.left = ballStart[0] + 'px';
     ball.style.bottom = ballStart[1] + 'px';
     changeDirection()
@@ -107,7 +107,7 @@ setInterval(moveBall, 30)
 // Ball Bounce
 function changeDirection(){
     // Wall bounce
-    if (ballPosition[0] >= (gridWidth - ballWidth) || ballPosition[1] >= (gridHeight - ballWidth)){
+    if (ballPosition[0] >= (gridWidth - ballWidth) || ballPosition[1] >= (gridHeight - ballWidth)) {
         bounceBall()
     }
 
