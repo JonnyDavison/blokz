@@ -94,17 +94,24 @@ function moveBall() {
     ballPosition[1] += 2;
     ball.style.left = ballStart[0] + 'px';
     ball.style.bottom = ballStart[1] + 'px';
+    changeDirection()
 }
 
 setInterval(moveBall, 30)
 
 // Ball Bounce
-// function changeDirection(){
-//     if 
-// }
+function changeDirection(){
+    // Wall bounce
+    if (ballPosition[0] >= (560 - 15) || ballPosition[1] >= (300 - 15)){
+        bounceBall()
+    }
 
-// function bounceBall(){
-//     if (ballPosition[0] >= ("560px" - '15px'){
+}
 
-//     }
-// )}
+function bounceBall(){
+    if (xAxis === 2 && yAxis === 2) {
+        xAxis =- 2
+        return
+    }
+
+}
