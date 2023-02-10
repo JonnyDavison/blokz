@@ -73,7 +73,7 @@ function moveSlider(event) {
             break;
         case 'ArrowRight':
             sliderStart[0] += 10
-            slider.style.right = sliderPosition[0] + 'px'
+            slider.style.left = sliderPosition[0] + 'px'
             break;
     }
 }
@@ -97,3 +97,14 @@ function moveBall() {
 }
 
 setInterval(moveBall, 30)
+
+// Ball Bounce
+// function changeDirection(){
+//     if 
+// }
+
+// function bounceBall(){
+//     if (ballPosition[0] >= ("560px" - '15px'){
+
+//     }
+// )}
