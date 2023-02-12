@@ -64,21 +64,25 @@ makeBrick()
 // Create slider
 let slider = document.createElement('div');
 slider.classList.add('slider');
-slider.style.left = sliderStart[0] + 'px'
-slider.style.bottom = sliderStart[1] + 'px'
+makeSlider()
 grid.appendChild(slider)
 
+// Make Slider
+function makeSlider() {
+    slider.style.left = sliderStart[0] + 'px'
+    slider.style.bottom = sliderStart[1] + 'px'
+}
 
 //Slider movement 
 function moveSlider(event) {
     switch (event.key) {
         case 'ArrowLeft':
             sliderStart[0] -= 10
-            slider.style.left = sliderPosition[0] + 'px'
+            makeSlider()
             break;
         case 'ArrowRight':
             sliderStart[0] += 10
-            slider.style.left = sliderPosition[0] + 'px'
+            makeSlider()
             break;
     }
 }
@@ -105,7 +109,7 @@ function moveBall() {
 setInterval(moveBall, 30)
 
 // Ball Bounce
-function changeDirection(){
+function changeDirection() {
     // Wall bounce
     if (ballPosition[0] >= (gridWidth - ballWidth) || ballPosition[1] >= (gridHeight - ballWidth)) {
         bounceBall()
@@ -113,10 +117,21 @@ function changeDirection(){
 
 }
 
-function bounceBall(){
+function bounceBall() {
     if (xMove === 2 && yMove === 2) {
-        xMove =- 2
+        xMove = -2
         return
     }
-
+    if (xMove == 2 && yMove == -2) {
+        xMove = 2
+        return
+    }
+    if (xMove == -2 && yMove == -2) {
+        yMove = 2
+        return
+    }
+    if (xMove == -2 && yMove == 2) {
+        xMove = 2
+        return
+    }
 }
