@@ -12,7 +12,7 @@ let sliderPosition = sliderStart;
 // Ball
 let ballWidth = 15
 // Ball starting point
-let ballStart = [270, 30]
+const ballStart = [270, 30]
 let ballPosition = ballStart
 // Movement
 let xMove = 2
@@ -97,6 +97,7 @@ function moveSlider(event) {
 }
 
 document.addEventListener('keydown', moveSlider);
+
 // Make Ball
 function makeBall() {
     ball.style.left = ballPosition[0] + 'px';
@@ -116,19 +117,21 @@ function moveBall() {
     makeBall()
     changeDirection()
 }
+
 ballSpeed = setInterval(moveBall, 30)
 
 // Ball Bounce
 function changeDirection() {
     // Wall bounce
-    if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition <= 0)) {
+    if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)) {
         bounceBall()
     }
-}
-// Game over
-if (ballPosition[1] <= 0) {
-   clearInterval(ballSpeed)
-   scoreBoard.innerHTML = "Loser"
+
+    // Game over
+    if (ballPosition[1] <= 0) {
+        clearInterval(ballSpeed)
+        scoreBoard.innerHTML = "GAME OVER"
+    }
 }
 
 function bounceBall() {
