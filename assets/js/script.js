@@ -84,7 +84,7 @@ function moveSlider(event) {
             break;
 
         case 'ArrowRight':
-            if (sliderStart[0] < gridWidth ) {
+            if (sliderStart[0] < gridWidth - brickWidth ) {
                 sliderStart[0] += 10
                 makeSlider()
             }
@@ -93,21 +93,24 @@ function moveSlider(event) {
 }
 
 document.addEventListener('keydown', moveSlider);
+// Make Ball
+function makeBall(){
+    ball.style.left = ballPosition[0] + 'px';
+    ball.style.bottom = ballPosition[1] + 'px';
+}
 
 // Create ball
 let ball = document.createElement('div');
 ball.classList.add('ball');
 grid.appendChild(ball);
-ball.style.left = ballStart[0] + 'px';
-ball.style.bottom = ballStart[1] + 'px';
+makeBall()
 
 
 //Ball movement
 function moveBall() {
     ballPosition[0] += xMove;
     ballPosition[1] += yMove;
-    ball.style.left = ballStart[0] + 'px';
-    ball.style.bottom = ballStart[1] + 'px';
+   makeBall()
     changeDirection()
 }
 
