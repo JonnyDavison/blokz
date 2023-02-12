@@ -1,7 +1,7 @@
 // Variables
 let grid = document.querySelector('.grid')
-let gridWidth = 300
-let gridHeight = 560
+let gridWidth = 560
+let gridHeight = 300
 // Create Brick
 const brickWidth = 100
 const brickHeight = 20
@@ -77,12 +77,17 @@ function makeSlider() {
 function moveSlider(event) {
     switch (event.key) {
         case 'ArrowLeft':
-            sliderStart[0] -= 10
-            makeSlider()
+            if (sliderStart[0] > 0) {
+                sliderStart[0] -= 10
+                makeSlider()
+            }
             break;
+
         case 'ArrowRight':
-            sliderStart[0] += 10
-            makeSlider()
+            if (sliderStart[0] < gridWidth ) {
+                sliderStart[0] += 10
+                makeSlider()
+            }
             break;
     }
 }
