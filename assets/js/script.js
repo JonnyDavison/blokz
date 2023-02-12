@@ -1,4 +1,5 @@
 // Variables
+// Grid
 let grid = document.querySelector('.grid')
 let gridWidth = 560
 let gridHeight = 300
@@ -8,7 +9,7 @@ const brickHeight = 20
 // Slider Starting point
 let sliderStart = [230, 10];
 let sliderPosition = sliderStart;
-//Ball
+// Ball
 let ballWidth = 15
 // Ball starting point
 let ballStart = [270, 30]
@@ -16,7 +17,10 @@ let ballPosition = ballStart
 // Movement
 let xMove = 2
 let yMove = 2
-
+//Timer
+let ballSpeed
+// Score Board
+let scoreBoard = document.querySelector('#score')
 
 
 class brick {
@@ -112,16 +116,19 @@ function moveBall() {
     makeBall()
     changeDirection()
 }
-
-setInterval(moveBall, 30)
+ballSpeed = setInterval(moveBall, 30)
 
 // Ball Bounce
 function changeDirection() {
     // Wall bounce
-    if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)){
+    if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition <= 0)) {
         bounceBall()
-    }    
-
+    }
+}
+// Game over
+if (ballPosition[1] <= 0) {
+   clearInterval(ballSpeed)
+   scoreBoard.innerHTML = "Loser"
 }
 
 function bounceBall() {
