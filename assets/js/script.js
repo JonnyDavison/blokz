@@ -132,6 +132,8 @@ function changeDirection() {
             (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1]) ) {
                 let groupBricks = document.querySelectorAll('.brick')
                 console.log(groupBricks)
+                groupBricks[i].classList.remove('brick')
+                bricks.splice(i)
             }
     }
 
