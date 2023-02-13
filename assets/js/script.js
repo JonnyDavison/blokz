@@ -1,26 +1,27 @@
 // Variables
 // Grid
 let grid = document.querySelector('.grid')
-let gridWidth = 560
-let gridHeight = 300
+let gridWidth = 560;
+let gridHeight = 300;
 // Create Brick
-const brickWidth = 100
-const brickHeight = 20
+const brickWidth = 100;
+const brickHeight = 20;
 // Slider Starting point
 let sliderStart = [230, 10];
 let sliderPosition = sliderStart;
 // Ball
-let ballWidth = 15
+let ballWidth = 15;
 // Ball starting point
-const ballStart = [270, 30]
-let ballPosition = ballStart
+const ballStart = [270, 30];
+let ballPosition = ballStart;
 // Movement
-let xMove = 2
-let yMove = 2
+let xMove = 2;
+let yMove = 2;
 //Timer
-let ballSpeed
+let ballSpeed;
 // Score Board
-let scoreBoard = document.querySelector('#score')
+let scoreBoard = document.querySelector('#score');
+let score = 0;
 
 
 class brick {
@@ -126,14 +127,16 @@ function changeDirection() {
     if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)) {
         bounceBall()
     }
+    
     // Brick bounce
     for (let i = 0; i < bricks.length; i++) {
         if ( (ballPosition[0] > bricks[i].bottomLeft[0] && ballPosition[0] < bricks[i].bottomRight[0]) &&
             (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1]) ) {
                 let groupBricks = document.querySelectorAll('.brick')
-                console.log(groupBricks)
                 groupBricks[i].classList.remove('brick')
                 bricks.splice(i)
+                bounceBall()    
+                score++
             }
     }
 
