@@ -126,6 +126,14 @@ function changeDirection() {
     if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)) {
         bounceBall()
     }
+    // Brick bounce
+    for (let i = 0; i < bricks.length; i++) {
+        if ( (ballPosition[0] > bricks[i].bottomLeft[0] && ballPosition[0] < bricks[i].bottomRight[0]) &&
+            (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1]) ) {
+                let groupBricks = document.querySelectorAll('.brick')
+                console.log(groupBricks)
+            }
+    }
 
     // Game over
     if (ballPosition[1] <= 0) {
