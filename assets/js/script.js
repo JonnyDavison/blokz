@@ -137,6 +137,7 @@ function changeDirection() {
                 bricks.splice(i)
                 bounceBall()    
                 score++
+                scoreBoard.innerHTML = score
             }
     }
 
