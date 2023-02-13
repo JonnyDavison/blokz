@@ -123,25 +123,34 @@ ballSpeed = setInterval(moveBall, 30)
 
 // Ball Bounce
 function changeDirection() {
-    // Wall bounce
+    // Wall Bounce
     if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)) {
         bounceBall()
     }
     
-    // Brick bounce
+    // Brick Bounce
     for (let i = 0; i < bricks.length; i++) {
         if ( (ballPosition[0] > bricks[i].bottomLeft[0] && ballPosition[0] < bricks[i].bottomRight[0]) &&
             (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1]) ) {
+                
                 let groupBricks = document.querySelectorAll('.brick')
                 groupBricks[i].classList.remove('brick')
-                bricks.splice(i)
+                bricks.splice(i, 1)
                 bounceBall()    
                 score++
-                scoreBoard.innerHTML = score
+                scoreBoard.innerHTML = score 
+
             }
     }
+     
+    // Slider Bounce
+    if ((ballPosition[0] > sliderPosition[0] && ballPosition[0] < sliderPosition[0] + brickWidth) 
+    && 
+    (ballPosition[1] > sliderPosition[1] && ballPosition[1] < sliderPosition[1] + brickHeight)) {
+        bounceBall()
+    }
 
-    // Game over
+    // Game Over
     if (ballPosition[1] <= 0) {
         clearInterval(ballSpeed)
         scoreBoard.innerHTML = "GAME OVER"
