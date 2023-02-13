@@ -140,6 +140,12 @@ function changeDirection() {
                 score++
                 scoreBoard.innerHTML = score 
 
+                // Winner
+                if (bricks.length === 0) {
+                    scoreBoard.innerHTML = "WINNER!"
+                    clearInterval(ballSpeed)
+                }
+
             }
     }
      
