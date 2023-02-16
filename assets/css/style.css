@@ -1,29 +1,72 @@
+/* Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tourney:wght@100&display=swap');
 
-/* Creates game area*/
+
+/* Game area*/
 .grid {
     position: absolute;
     width: 560px;
     height: 300px;
-    border: solid black 1px;
+    border: solid #ffffff 3px;
+    background-color: #000000;
+    top: 500px;
 }
-/* Creates blocks */
+
+/* Bricks */
 .brick {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: blueviolet;
+    background-color: #B7FF00
 }
+
+/* Player / Slider*/
 .slider {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: green;
+    background-color: #ffffff;
 }
 
+/* Ball */
 .ball {
     position: absolute;
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: red;
+    background-color: #fc0000;
+}
+
+body {
+    background-color: #000000;
+}
+
+.title {
+    font-family: 'Tourney', sans-serif;
+    font-size: 50px;
+    color: #B7FF00;
+    text-align: center;
+}
+
+.score-text {
+    font-family: 'Tourney', sans-serif;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+#score {
+    color: #fc0000;
+}
+
+footer {
+    background-color: #B7FF00;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0px;
 }
