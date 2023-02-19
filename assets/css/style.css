@@ -8,8 +8,9 @@
     width: 560px;
     height: 300px;
     border: solid #ffffff 3px;
-    background-color: #000000;
-    top: 500px;
+    background-color: #000000;  
+    left: 0;
+    right: 0;
 }
 
 /* Bricks */
@@ -40,12 +41,18 @@
 body {
     background-color: #000000;
 }
-
+header {
+    width: 100%;
+    
+}
 .title {
     font-family: 'Tourney', sans-serif;
     font-size: 75px;
     color: #B7FF00;
     text-align: center;
+    display: block;
+    margin: 0;
+    
 }
 
 .tagline {
@@ -53,6 +60,9 @@ body {
     font-family: 'Tourney', sans-serif;
     color: #B7FF00;
     text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .score-text {
@@ -105,11 +115,15 @@ footer {
     font-family: 'Tourney', sans-serif;
 }
 
+#start {
+    display: flex;
+    justify-content: center;
+}
+
 .start-button {
     background-color: #fc0000;
     height: 60px;
     width: 60px;
     font-family: 'Tourney', sans-serif;
     font-size: 30px;
-    justify-content: center;
 }

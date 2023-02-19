@@ -144,6 +144,7 @@ function changeDirection() {
                 if (bricks.length === 0) {
                     scoreBoard.innerHTML = "WINNER!"
                     clearInterval(ballSpeed)
+                    document.removeEventListener('keydown', moveSlider)
                 }
 
             }
@@ -159,6 +160,7 @@ function changeDirection() {
     // Game Over
     if (ballPosition[1] <= 0) {
         clearInterval(ballSpeed)
+        document.removeEventListener('keydown', moveSlider)
         scoreBoard.innerHTML = "GAME OVER"
     }
 }
