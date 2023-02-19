@@ -43,14 +43,21 @@ body {
 
 .title {
     font-family: 'Tourney', sans-serif;
-    font-size: 50px;
+    font-size: 75px;
+    color: #B7FF00;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 45px;
+    font-family: 'Tourney', sans-serif;
     color: #B7FF00;
     text-align: center;
 }
 
 .score-text {
     font-family: 'Tourney', sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     color: #ffffff;
     text-align: center;
     margin: 0;
@@ -62,11 +69,47 @@ body {
 
 footer {
     background-color: #B7FF00;
-    height: 100px;
+    height: 50px;
     width: 100%;
     position: fixed;
     width: 100%;
     left: 0;
     bottom: 0;
     margin: 0px;
+}
+.socials {
+    display: flex;
+}
+
+.social-media {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin: auto;
+
+}
+
+.social-media i {
+    color: #000000;
+
+}
+
+.copyright {
+    color: #000000;
+    text-align: center;
+    margin: 0; 
+    font-family: 'Tourney', sans-serif;
+}
+
+.start-button {
+    background-color: #fc0000;
+    height: 60px;
+    width: 60px;
+    font-family: 'Tourney', sans-serif;
+    font-size: 30px;
+    justify-content: center;
 }

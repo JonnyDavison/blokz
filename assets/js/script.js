@@ -181,3 +181,7 @@ function bounceBall() {
         return
     }
 }
+
+function startGame() {
+    console.log('Start')
+}
