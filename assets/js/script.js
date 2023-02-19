@@ -119,7 +119,7 @@ function moveBall() {
     changeDirection()
 }
 
-ballSpeed = setInterval(moveBall, 30)
+
 
 // Ball Bounce
 function changeDirection() {
@@ -162,6 +162,7 @@ function changeDirection() {
         clearInterval(ballSpeed)
         document.removeEventListener('keydown', moveSlider)
         scoreBoard.innerHTML = "GAME OVER"
+        resetGame()
     }
 }
 
@@ -185,5 +186,7 @@ function bounceBall() {
 }
 
 function startGame() {
-    console.log('Start')
+    ballSpeed = setInterval(moveBall, 30);
+    let startDiv = document.getElementById('start')
+    startDiv.style.display = 'none'
 }

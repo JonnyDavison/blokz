@@ -16,12 +16,18 @@
         <h2 class="tagline">Retro Arcade</h2>
         <br>
         <p class="score-text"> Score: <a id="score">0</a></p>
-        <div id="start" class="start">
-            <button onclick="startGame()" class="start-button"><i class="fa-solid fa-play"></i></button>
-        </div>
-    </header> 
-        <div class="grid"></div>
         
+    </header>
+    <div id="start" class="start">
+        <button onclick="startGame()" class="start-button">Play <i class="fa-solid fa-play"></i></button>
+    </div>
+    <div id="reset" class="reset">
+        <button onclick="resetGame()" class="reset-button" style="display: none;">Reset <i class="fa-solid fa-arrow-rotate-left"></i></button>
+    </div>
+    
+    <div id="game-area">
+        <div class="grid"></div>
+    </div>
         
     <footer>
         <div class="socials">
