@@ -145,7 +145,7 @@ function changeDirection() {
                 scoreBoard.innerHTML = "WINNER!"
                 clearInterval(ballSpeed)
                 document.removeEventListener('keydown', moveSlider)
-                resetButton()
+
             }
 
         }
@@ -162,7 +162,7 @@ function changeDirection() {
         clearInterval(ballSpeed)
         document.removeEventListener('keydown', moveSlider)
         scoreBoard.innerHTML = "GAME OVER"
-        resetButton()
+
     }
 }
 
@@ -184,31 +184,28 @@ function bounceBall() {
         return
     }
 }
-
+// Start
 function startGame() {
     ballSpeed = setInterval(moveBall, 30);
-    let startDiv = document.getElementById('start')
-    startDiv.style.display = 'none'
+    document.addEventListener('keydown', moveSlider)
+    startButtonDisappear()
     resetButtonAppear()
+    changeDirection()
 }
 
-function resetGame() {
-    console.log('test')
-    let resetDiv = document.getElementById('reset')
-    resetDiv.style.display = 'none'
-    startButtonAppear()
-    
+function startButtonDisappear() {
+    let startDiv = document.getElementById('start')
+    startDiv.style.display = 'none'
 }
+
+// Reset
+function resetGame() {
+    window.location.reload();
+}
+
 function resetButtonAppear() {
     let resetDiv = document.getElementById('reset')
     resetDiv.style.display = 'flex'
-    // let resetDiv = document.getElementById('reset')
-    // resetDiv.style.display = 'flex'
-}
-
-function startButtonAppear(){
-    let startDiv = document.getElementById('start')
-    startDiv.style.display = 'flex'
 }
 
 
