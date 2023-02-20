@@ -208,4 +208,20 @@ function resetButtonAppear() {
     resetDiv.style.display = 'flex'
 }
 
-
+//Button Control 
+function moveLeft() {
+    let moveL = document.getElementById('slider');
+    if (sliderStart[0] > 0) {
+        sliderStart[0] -= 10
+        makeSlider()
+    }
+  }
+  
+  function moveRight() {
+    const moveR = document.getElementById('slider');
+    if (sliderStart[0] < gridWidth - brickWidth) {
+        sliderStart[0] += 10
+        makeSlider()
+    }
+  }
+  
