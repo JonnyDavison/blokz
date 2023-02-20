@@ -127,33 +127,33 @@ function changeDirection() {
     if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)) {
         bounceBall()
     }
-    
+
     // Brick Bounce
     for (let i = 0; i < bricks.length; i++) {
-        if ( (ballPosition[0] > bricks[i].bottomLeft[0] && ballPosition[0] < bricks[i].bottomRight[0]) &&
-            (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1]) ) {
-                
-                let groupBricks = document.querySelectorAll('.brick')
-                groupBricks[i].classList.remove('brick')
-                bricks.splice(i, 1)
-                bounceBall()    
-                score++
-                scoreBoard.innerHTML = score 
+        if ((ballPosition[0] > bricks[i].bottomLeft[0] && ballPosition[0] < bricks[i].bottomRight[0]) &&
+            (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1])) {
 
-                // Winner
-                if (bricks.length === 0) {
-                    scoreBoard.innerHTML = "WINNER!"
-                    clearInterval(ballSpeed)
-                    document.removeEventListener('keydown', moveSlider)
-                }
+            let groupBricks = document.querySelectorAll('.brick')
+            groupBricks[i].classList.remove('brick')
+            bricks.splice(i, 1)
+            bounceBall()
+            score++
+            scoreBoard.innerHTML = score
 
+            // Winner
+            if (bricks.length === 0) {
+                scoreBoard.innerHTML = "WINNER!"
+                clearInterval(ballSpeed)
+                document.removeEventListener('keydown', moveSlider)
+                resetButton()
             }
+
+        }
     }
-     
+
     // Slider Bounce
-    if ((ballPosition[0] > sliderPosition[0] && ballPosition[0] < sliderPosition[0] + brickWidth) 
-    && 
-    (ballPosition[1] > sliderPosition[1] && ballPosition[1] < sliderPosition[1] + brickHeight)) {
+    if ((ballPosition[0] > sliderPosition[0] && ballPosition[0] < sliderPosition[0] + brickWidth) &&
+        (ballPosition[1] > sliderPosition[1] && ballPosition[1] < sliderPosition[1] + brickHeight)) {
         bounceBall()
     }
 
@@ -162,7 +162,7 @@ function changeDirection() {
         clearInterval(ballSpeed)
         document.removeEventListener('keydown', moveSlider)
         scoreBoard.innerHTML = "GAME OVER"
-        resetGame()
+        resetButton()
     }
 }
 
@@ -189,4 +189,26 @@ function startGame() {
     ballSpeed = setInterval(moveBall, 30);
     let startDiv = document.getElementById('start')
     startDiv.style.display = 'none'
+    resetButtonAppear()
 }
+
+function resetGame() {
+    console.log('test')
+    let resetDiv = document.getElementById('reset')
+    resetDiv.style.display = 'none'
+    startButtonAppear()
+    
+}
+function resetButtonAppear() {
+    let resetDiv = document.getElementById('reset')
+    resetDiv.style.display = 'flex'
+    // let resetDiv = document.getElementById('reset')
+    // resetDiv.style.display = 'flex'
+}
+
+function startButtonAppear(){
+    let startDiv = document.getElementById('start')
+    startDiv.style.display = 'flex'
+}
+
+

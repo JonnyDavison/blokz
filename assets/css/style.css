@@ -145,7 +145,7 @@ footer {
     bottom: 5%;
 }
 #reset {
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
