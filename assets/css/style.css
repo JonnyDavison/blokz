@@ -180,3 +180,16 @@ button {
 #right-control {
     padding: 0px 30px 0px 30px;
 }
+
+@media screen and (max-width: 1300px){
+    
+}
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width: 800px){
+
+}
+@media screen and (max-width: 400px) {
+
+}

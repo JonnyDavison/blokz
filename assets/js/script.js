@@ -1,6 +1,6 @@
 // Variables
 // Grid
-let grid = document.querySelector('.grid')
+let grid = document.querySelector('.grid');
 let gridWidth = 560;
 let gridHeight = 300;
 // Create Brick
@@ -26,10 +26,10 @@ let score = 0;
 
 class brick {
     constructor(xAxis, yAxis) {
-        this.bottomLeft = [xAxis, yAxis]
-        this.bottomRight = [xAxis + brickWidth, yAxis]
-        this.topLeft = [xAxis, yAxis + brickHeight]
-        this.topRight = [xAxis + brickHeight, yAxis + brickHeight]
+        this.bottomLeft = [xAxis, yAxis];
+        this.bottomRight = [xAxis + brickWidth, yAxis];
+        this.topLeft = [xAxis, yAxis + brickHeight];
+        this.topRight = [xAxis + brickHeight, yAxis + brickHeight];
     }
 }
 // Make multiple bricks
@@ -49,33 +49,33 @@ let bricks = [
     new brick(230, 220),
     new brick(340, 220),
     new brick(450, 220),
-]
+];
 
 
 //Draw brick
 function makeBrick() {
     for (let i = 0; i < bricks.length; i++) {
         let brick = document.createElement('div');
-        brick.classList.add('brick')
-        brick.style.left = bricks[i].bottomLeft[0] + 'px'
-        brick.style.bottom = bricks[i].bottomLeft[1] + 'px'
-        grid.appendChild(brick)
+        brick.classList.add('brick');
+        brick.style.left = bricks[i].bottomLeft[0] + 'px';
+        brick.style.bottom = bricks[i].bottomLeft[1] + 'px';
+        grid.appendChild(brick);
     }
 }
 
-makeBrick()
+makeBrick();
 
 
 // Create slider
 let slider = document.createElement('div');
 slider.classList.add('slider');
-makeSlider()
-grid.appendChild(slider)
+makeSlider();
+grid.appendChild(slider);
 
 // Make Slider
 function makeSlider() {
-    slider.style.left = sliderStart[0] + 'px'
-    slider.style.bottom = sliderStart[1] + 'px'
+    slider.style.left = sliderStart[0] + 'px';
+    slider.style.bottom = sliderStart[1] + 'px';
 }
 
 //Slider movement 
@@ -83,15 +83,15 @@ function moveSlider(event) {
     switch (event.key) {
         case 'ArrowLeft':
             if (sliderStart[0] > 0) {
-                sliderStart[0] -= 10
-                makeSlider()
+                sliderStart[0] -= 10;
+                makeSlider();
             }
             break;
 
         case 'ArrowRight':
             if (sliderStart[0] < gridWidth - brickWidth) {
-                sliderStart[0] += 10
-                makeSlider()
+                sliderStart[0] += 10;
+                makeSlider();
             }
             break;
     }
@@ -115,8 +115,8 @@ grid.appendChild(ball);
 function moveBall() {
     ballPosition[0] += xMove;
     ballPosition[1] += yMove;
-    makeBall()
-    changeDirection()
+    makeBall();
+    changeDirection();
 }
 
 
@@ -125,7 +125,7 @@ function moveBall() {
 function changeDirection() {
     // Wall Bounce
     if (ballPosition[1] >= (gridHeight - ballWidth) || ballPosition[0] >= (gridWidth - ballWidth) || (ballPosition[0] <= 0)) {
-        bounceBall()
+        bounceBall();
     }
 
     // Brick Bounce
@@ -133,18 +133,18 @@ function changeDirection() {
         if ((ballPosition[0] > bricks[i].bottomLeft[0] && ballPosition[0] < bricks[i].bottomRight[0]) &&
             (ballPosition[1] > bricks[i].bottomLeft[1] && ballPosition[1] < bricks[i].topLeft[1])) {
 
-            let groupBricks = document.querySelectorAll('.brick')
-            groupBricks[i].classList.remove('brick')
-            bricks.splice(i, 1)
-            bounceBall()
-            score++
-            scoreBoard.innerHTML = score
+            let groupBricks = document.querySelectorAll('.brick');
+            groupBricks[i].classList.remove('brick');
+            bricks.splice(i, 1);
+            bounceBall();
+            score++;
+            scoreBoard.innerHTML = score;
 
             // Winner
             if (bricks.length === 0) {
-                scoreBoard.innerHTML = "WINNER!"
-                clearInterval(ballSpeed)
-                document.removeEventListener('keydown', moveSlider)
+                scoreBoard.innerHTML = "WINNER!";
+                clearInterval(ballSpeed);
+                document.removeEventListener('keydown', moveSlider);
 
             }
 
@@ -154,48 +154,48 @@ function changeDirection() {
     // Slider Bounce
     if ((ballPosition[0] > sliderPosition[0] && ballPosition[0] < sliderPosition[0] + brickWidth) &&
         (ballPosition[1] > sliderPosition[1] && ballPosition[1] < sliderPosition[1] + brickHeight)) {
-        bounceBall()
+        bounceBall();
     }
 
     // Game Over
     if (ballPosition[1] <= 0) {
-        clearInterval(ballSpeed)
-        document.removeEventListener('keydown', moveSlider)
-        scoreBoard.innerHTML = "GAME OVER"
+        clearInterval(ballSpeed);
+        document.removeEventListener('keydown', moveSlider);
+        scoreBoard.innerHTML = "GAME OVER";
 
     }
 }
 
 function bounceBall() {
     if (xMove === 2 && yMove === 2) {
-        yMove = -2
-        return
+        yMove = -2;
+        return;
     }
     if (xMove === 2 && yMove === -2) {
-        xMove = -2
-        return
+        xMove = -2;
+        return;
     }
     if (xMove === -2 && yMove === -2) {
-        yMove = 2
-        return
+        yMove = 2;
+        return;
     }
     if (xMove === -2 && yMove === 2) {
-        xMove = 2
-        return
+        xMove = 2;
+        return;
     }
 }
 // Start
 function startGame() {
     ballSpeed = setInterval(moveBall, 30);
-    document.addEventListener('keydown', moveSlider)
-    startButtonDisappear()
-    resetButtonAppear()
-    changeDirection()
+    document.addEventListener('keydown', moveSlider);
+    startButtonDisappear();
+    resetButtonAppear();
+    changeDirection();
 }
 
 function startButtonDisappear() {
-    let startDiv = document.getElementById('start')
-    startDiv.style.display = 'none'
+    let startDiv = document.getElementById('start');
+    startDiv.style.display = 'none';
 }
 
 // Reset
@@ -204,24 +204,24 @@ function resetGame() {
 }
 
 function resetButtonAppear() {
-    let resetDiv = document.getElementById('reset')
-    resetDiv.style.display = 'flex'
+    let resetDiv = document.getElementById('reset');
+    resetDiv.style.display = 'flex';
 }
 
 //Button Control 
 function moveLeft() {
     let moveL = document.getElementById('slider');
     if (sliderStart[0] > 0) {
-        sliderStart[0] -= 10
-        makeSlider()
+        sliderStart[0] -= 10;
+        makeSlider();
     }
   }
   
   function moveRight() {
     const moveR = document.getElementById('slider');
     if (sliderStart[0] < gridWidth - brickWidth) {
-        sliderStart[0] += 10
-        makeSlider()
+        sliderStart[0] += 10;
+        makeSlider();
     }
   }
   
