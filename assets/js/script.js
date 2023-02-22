@@ -3,27 +3,35 @@
 let grid = document.querySelector('.grid');
 let gridWidth = 560;
 let gridHeight = 300;
+
 // Create Brick
 let brickWidth = 100;
 let brickHeight = 20;
+
 // Slider Starting point
 let sliderStart = [230, 10];
 let sliderPosition = sliderStart;
+
 // Ball
 let ballWidth = 15;
+
 // Ball starting point
 let ballStart = [270, 30];
 let ballPosition = ballStart;
+
 // Movement
 let xMove = 2;
 let yMove = 2;
+
 //Timer
 let ballSpeed;
+
 // Score Board
 let scoreBoard = document.querySelector('#score');
 let score = 0;
 
 
+// Draw brick corners by x/y co-ordinants
 class brick {
     constructor(xAxis, yAxis) {
         this.bottomLeft = [xAxis, yAxis];
@@ -32,6 +40,8 @@ class brick {
         this.topRight = [xAxis + brickHeight, yAxis + brickHeight];
     }
 }
+
+
 // Make multiple bricks
 let bricks = [
     new brick(10, 280),
@@ -63,14 +73,18 @@ function makeBrick() {
     }
 }
 
+
+// Calls Make brick when screen size is above 650px 
 function callMakeBrick(large) {
     if (large.matches) {
         makeBrick();
     }
 }
+
 let large = window.matchMedia("(min-width: 650px)")
 callMakeBrick(large)
 large.addListener(callMakeBrick)
+
 
 // Create slider
 let slider = document.createElement('div');
@@ -78,11 +92,13 @@ slider.classList.add('slider');
 makeSlider();
 grid.appendChild(slider);
 
+
 // Make Slider
 function makeSlider() {
     slider.style.left = sliderStart[0] + 'px';
     slider.style.bottom = sliderStart[1] + 'px';
 }
+
 
 //Slider movement 
 function moveSlider(event) {
@@ -105,17 +121,20 @@ function moveSlider(event) {
 
 document.addEventListener('keydown', moveSlider);
 
+
 // Make Ball
 function makeBall() {
     ball.style.left = ballPosition[0] + 'px';
     ball.style.bottom = ballPosition[1] + 'px';
 }
 
+
 // Create ball
 let ball = document.createElement('div');
 ball.classList.add('ball');
 makeBall();
 grid.appendChild(ball);
+
 
 //Ball movement
 function moveBall() {
@@ -124,7 +143,6 @@ function moveBall() {
     makeBall();
     changeDirection();
 }
-
 
 
 // Ball Bounce
@@ -172,6 +190,7 @@ function changeDirection() {
     }
 }
 
+// Bounce direction
 function bounceBall() {
     if (xMove === 2 && yMove === 2) {
         yMove = -2;
@@ -190,7 +209,7 @@ function bounceBall() {
         return;
     }
 }
-// Start
+// Start ball movement and speed
 function startGame() {
     ballSpeed = setInterval(moveBall, 30);
     document.addEventListener('keydown', moveSlider);
@@ -199,22 +218,28 @@ function startGame() {
     changeDirection();
 }
 
+// Start button dissappear after use
 function startButtonDisappear() {
     let startDiv = document.getElementById('start');
     startDiv.style.display = 'none';
 }
 
-// Reset
+
+// Reset butoon fuction
 function resetGame() {
     window.location.reload();
 }
 
+
+// Reset button dissappear after use
 function resetButtonAppear() {
     let resetDiv = document.getElementById('reset');
     resetDiv.style.display = 'flex';
 }
 
-//Button Control 
+
+//Touch screen button control 
+// Left arrow
 function moveLeft() {
     let moveL = document.getElementById('slider');
     if (sliderStart[0] > 0) {
@@ -222,7 +247,7 @@ function moveLeft() {
         makeSlider();
     }
 }
-
+// Right arrow
 function moveRight() {
     const moveR = document.getElementById('slider');
     if (sliderStart[0] < gridWidth - brickWidth) {
@@ -231,29 +256,39 @@ function moveRight() {
     }
 }
 
-//Media Queries
 
+//Media Queries for screens below 650px
+
+// Small screen function to resize
 function smallScreen(x) {
-    if (x.matches) { // If media query matches
+
+    if (x.matches) { 
+        // Resize game area
         document.getElementById('game-area').style.width = '310px'
         document.getElementById('game-area').style.height = '350px'
+        
+        // Re-declaire variable values 
         // Grid
         grid = document.querySelector('.grid');
         gridWidth = 280;
         gridHeight = 300;
+
         // Create Brick
         brickWidth = 50;
         brickHeight = 15;
+
         // Slider Starting point
         sliderStart = [100, 10];
         sliderPosition = sliderStart;
 
-        // Ball
+        // Ball diameter 
         ballWidth = 15;
+
         // Ball starting point
         ballStart = [143, 30];
         ballPosition = ballStart;
 
+        // X/Y co-ordinates for brick positioning on smaller grid
         bricks = [
             new brick(5, 280),
             new brick(60, 280),
@@ -272,6 +307,8 @@ function smallScreen(x) {
             new brick(225, 220),
         ];
 
+
+        // Create smaller bicks in new location
         function smallBrick() {
             for (let i = 0; i < bricks.length; i++) {
                 let brick = document.createElement('div');
@@ -281,12 +318,16 @@ function smallScreen(x) {
                 grid.appendChild(brick);
             }
         }
-
+        
+        
+        // Create slider in new position 
         function makeSmallSlider() {
             slider.style.left = sliderStart[0] + 'px';
             slider.style.bottom = sliderStart[1] + 'px';
         }
-
+        
+        
+        // Controls for slider in smaller grid 
         function smallSlider(event) {
             switch (event.key) {
                 case 'ArrowLeft':
@@ -297,7 +338,7 @@ function smallScreen(x) {
                     break;
 
                 case 'ArrowRight':
-                    if (sliderStart[0] < gridWidth - 300) {
+                    if (sliderStart[0] < gridWidth - brickWidth) {
                         sliderStart[0] += 10;
                         makeSmallSlider();
                     }
@@ -305,6 +346,7 @@ function smallScreen(x) {
             }
         }
     }
+    // Calling functions
     smallBrick();
     makeSmallSlider();
     makeBall();
@@ -312,6 +354,8 @@ function smallScreen(x) {
 
 }
 
+
+// Screen max-width setting and listener
 let x = window.matchMedia("(max-width: 650px)")
 smallScreen(x)
 x.addListener(smallScreen)
