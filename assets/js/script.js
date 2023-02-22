@@ -311,6 +311,6 @@ smallSlider();
 
 }
 
-let x = window.matchMedia("(max-width: 600px)")
+let x = window.matchMedia("(max-width: 850px)")
 smallScreen(x)
 x.addListener(smallScreen)
