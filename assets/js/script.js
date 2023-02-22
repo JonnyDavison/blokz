@@ -4,15 +4,15 @@ let grid = document.querySelector('.grid');
 let gridWidth = 560;
 let gridHeight = 300;
 // Create Brick
-const brickWidth = 100;
-const brickHeight = 20;
+let brickWidth = 100;
+let brickHeight = 20;
 // Slider Starting point
 let sliderStart = [230, 10];
 let sliderPosition = sliderStart;
 // Ball
 let ballWidth = 15;
 // Ball starting point
-const ballStart = [270, 30];
+let ballStart = [270, 30];
 let ballPosition = ballStart;
 // Movement
 let xMove = 2;
@@ -62,9 +62,14 @@ function makeBrick() {
         grid.appendChild(brick);
     }
 }
-
+function callMakeBrick(large) {
+    if (large.matches) {
 makeBrick();
-
+    }
+}
+let large = window.matchMedia("(min-width: 400px)")
+callMakeBrick(large)
+large.addListener(callMakeBrick)
 
 // Create slider
 let slider = document.createElement('div');
@@ -227,35 +232,85 @@ function moveRight() {
 
 //Media Queries
 
-//   function myFunction(mq400) {
-if (mq400.matches) {
-    //  document.getElementsByClassName('brick')
-    //  bricks = [
-    //     new brick(45, 126),
-    //     new brick(54, 126),
-    //     new brick(230, 280),
-    //     new brick(340, 280),
-    //     new brick(450, 280),
-    //     new brick(10, 250),
-    //     new brick(120, 250),
-    //     new brick(230, 250),
-    //     new brick(340, 250),
-    //     new brick(450, 250),
-    //     new brick(10, 220),
-    //     new brick(120, 220),
-    //     new brick(230, 220),
-    //     new brick(340, 220),
-    //     new brick(450, 220),
-    // ];
-    sliderPosition = [103, 4]
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        document.getElementById('game-area').style.width = '310px'
+        document.getElementById('game-area').style.height = '350px'
+        // Grid
+        grid = document.querySelector('.grid');
+        gridWidth = 280;
+        gridHeight = 300;
+        // Create Brick
+        brickWidth = 50;
+        brickHeight = 15;
+        // Slider Starting point
+        sliderStart = [100, 10];
+        sliderPosition = sliderStart;
+        sliderWidth = 100
+        // Ball
+        ballWidth = 15;
+        // Ball starting point
+        ballStart = [143, 30];
+        ballPosition = ballStart;
+
+        bricks = [
+            new brick(5, 280),
+            new brick(60, 280),
+            new brick(115, 280),
+            new brick(170, 280),
+            new brick(225, 280),
+            new brick(5, 250),
+            new brick(60, 250),
+            new brick(115, 250),
+            new brick(170, 250),
+            new brick(225, 250),
+            new brick(5, 220),
+            new brick(60, 220),
+            new brick(115, 220),
+            new brick(170, 220),
+            new brick(225, 220),
+        ];
+   
+        function smallBrick() {
+            for (let i = 0; i < bricks.length; i++) {
+                let brick = document.createElement('div');
+                brick.classList.add('brick');
+                brick.style.left = bricks[i].bottomLeft[0] + 'px';
+                brick.style.bottom = bricks[i].bottomLeft[1] + 'px';
+                grid.appendChild(brick);
+            }
+        }
+        
+        function makeSmallSlider() {
+            slider.style.left = sliderStart[0] + 'px';
+            slider.style.bottom = sliderStart[1] + 'px';
+        }
+        
+        function smallSlider(event) {
+            switch (event.key) {
+                case 'ArrowLeft':
+                    if (sliderStart[0] > 0) {
+                        sliderStart[0] -= 10;
+                        makeSmallSlider();
+                    }
+                    break;
+        
+                case 'ArrowRight':
+                    if (sliderStart[0] < gridWidth - 300) {
+                        sliderStart[0] += 10;
+                        makeSmallSlider();
+                    }
+                    break;
+            }
+        }
+}
+smallBrick();
+makeSmallSlider();
+makeBall();
+smallSlider();
 
 }
 
-makeBrick();
-
-
-
-
-let mq400 = window.matchMedia("(max-width: 400px)")
-myFunction(mq400) // Call listener function at run time
-mq400.addEventListener(myFunction) // Attach listener function on state changes
+let x = window.matchMedia("(max-width: 400px)")
+myFunction(x)
+x.addListener(myFunction)
