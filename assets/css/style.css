@@ -301,7 +301,7 @@ footer {
     justify-content: center;
     width: 100%;
     color: red;
-    font-size: 75px;
+    font-size: 120px;
     z-index: 100;
     padding-bottom: 50px;
     margin-top: auto;
@@ -310,6 +310,7 @@ footer {
 button {
     all: unset;
     cursor: pointer;
+    touch-action: manipulation;
 }
 
 #left-control {
