@@ -215,13 +215,47 @@ function moveLeft() {
         sliderStart[0] -= 10;
         makeSlider();
     }
-  }
-  
-  function moveRight() {
+}
+
+function moveRight() {
     const moveR = document.getElementById('slider');
     if (sliderStart[0] < gridWidth - brickWidth) {
         sliderStart[0] += 10;
         makeSlider();
     }
-  }
-  
+}
+
+//Media Queries
+
+//   function myFunction(mq400) {
+if (mq400.matches) {
+    //  document.getElementsByClassName('brick')
+    //  bricks = [
+    //     new brick(45, 126),
+    //     new brick(54, 126),
+    //     new brick(230, 280),
+    //     new brick(340, 280),
+    //     new brick(450, 280),
+    //     new brick(10, 250),
+    //     new brick(120, 250),
+    //     new brick(230, 250),
+    //     new brick(340, 250),
+    //     new brick(450, 250),
+    //     new brick(10, 220),
+    //     new brick(120, 220),
+    //     new brick(230, 220),
+    //     new brick(340, 220),
+    //     new brick(450, 220),
+    // ];
+    sliderPosition = [103, 4]
+
+}
+
+makeBrick();
+
+
+
+
+let mq400 = window.matchMedia("(max-width: 400px)")
+myFunction(mq400) // Call listener function at run time
+mq400.addEventListener(myFunction) // Attach listener function on state changes
