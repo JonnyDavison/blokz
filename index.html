@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Retro Game based on the 1976 classic">
     <meta name="description" content="Author: Jonny Davison">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>BLÖKZ GAME</title>
-    <!-- ADD Favicon <link rel="icon" type="image/x-icon" href="/images/favicon.ico">  -->
 </head>
 
 <body>
@@ -21,7 +24,8 @@
 
     </header>
     <div id="start" class="start">
-        <button name="start-button" onclick="startGame()" class="start-button" aria-label="startbutton">Play <i class="fa-solid fa-play"></i></button>
+        <button name="start-button" onclick="startGame()" class="start-button" aria-label="startbutton">Play <i
+                class="fa-solid fa-play"></i></button>
     </div>
     <div id="reset" class="reset">
         <button name="reset-button" onclick="resetGame()" class="reset-button" aria-label="resetbutton">Reset <i
@@ -30,18 +34,20 @@
 
     <div id="game-area">
         <div class="grid"></div>
-        
+
         <div id="controls">
             <div id="left-control">
-                <button name="left-control" class="controls" onclick="moveLeft()" aria-label="leftbutton"><i class="fa-solid fa-arrow-left"></i></button>
+                <button name="left-control" class="controls" onclick="moveLeft()" aria-label="leftbutton"><i
+                        class="fa-solid fa-arrow-left"></i></button>
             </div>
-            
+
             <div id="right-control">
-                <button name="right-control" class="controls" onclick="moveRight()" aria-label="rightbutton"><i class="fa-solid fa-arrow-right"></i></button>
+                <button name="right-control" class="controls" onclick="moveRight()" aria-label="rightbutton"><i
+                        class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
-    
+
 
     <footer>
         <div class="socials">
