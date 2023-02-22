@@ -81,9 +81,9 @@ function callMakeBrick(large) {
     }
 }
 
-let large = window.matchMedia("(min-width: 650px)")
-callMakeBrick(large)
-large.addListener(callMakeBrick)
+let large = window.matchMedia("(min-width: 650px)");
+callMakeBrick(large);
+large.addListener(callMakeBrick);
 
 
 // Create slider
@@ -262,11 +262,11 @@ function moveRight() {
 // Small screen function to resize
 function smallScreen(x) {
 
-    if (x.matches) { 
+    if (x.matches) {
         // Resize game area
-        document.getElementById('game-area').style.width = '310px'
-        document.getElementById('game-area').style.height = '350px'
-        
+        document.getElementById('game-area').style.width = '310px';
+        document.getElementById('game-area').style.height = '350px';
+
         // Re-declaire variable values 
         // Grid
         grid = document.querySelector('.grid');
@@ -318,15 +318,15 @@ function smallScreen(x) {
                 grid.appendChild(brick);
             }
         }
-        
-        
+
+
         // Create slider in new position 
         function makeSmallSlider() {
             slider.style.left = sliderStart[0] + 'px';
             slider.style.bottom = sliderStart[1] + 'px';
         }
-        
-        
+
+
         // Controls for slider in smaller grid 
         function smallSlider(event) {
             switch (event.key) {
@@ -345,17 +345,18 @@ function smallScreen(x) {
                     break;
             }
         }
+        // Callin functions
+        smallBrick();
+        makeSmallSlider();
+        makeBall();
+        smallSlider();
     }
-    // Callin functions
-    smallBrick();
-    makeSmallSlider();
-    makeBall();
-    smallSlider();
+
 
 }
 
 
 // Screen max-width setting and listener
-let x = window.matchMedia("(max-width: 650px)")
-smallScreen(x)
-x.addListener(smallScreen)
+let x = window.matchMedia("(max-width: 650px)");
+smallScreen(x);
+x.addListener(smallScreen);
