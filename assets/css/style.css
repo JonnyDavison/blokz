@@ -35,6 +35,7 @@
     background-color: #B7FF00
 }
 
+
 /* Player / Slider*/
 .slider {
     position: absolute;
@@ -42,6 +43,7 @@
     height: 20px;
     background-color: #ffffff;
 }
+
 
 /* Ball */
 .ball {
@@ -52,15 +54,29 @@
     background-color: #fc0000;
 }
 
+
+/* General */
 body {
     background-color: #000000;
 }
 
 header {
     width: 100%;
-
 }
 
+footer {
+    background-color: #B7FF00;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0px;
+}
+
+
+/* Title */
 .title {
     font-family: 'Tourney', sans-serif;
     font-size: 75px;
@@ -68,9 +84,10 @@ header {
     text-align: center;
     display: block;
     margin: 0;
-
 }
 
+
+/* Sub-title */
 .tagline {
     font-size: 45px;
     font-family: 'Tourney', sans-serif;
@@ -93,17 +110,8 @@ header {
     color: #fc0000;
 }
 
-footer {
-    background-color: #B7FF00;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    margin: 0px;
-}
 
+/* Social Media links */
 .socials {
     display: flex;
 }
@@ -125,6 +133,7 @@ footer {
 
 }
 
+/* Copytight Footer note */
 .copyright {
     color: #000000;
     text-align: center;
@@ -132,6 +141,8 @@ footer {
     font-family: 'Tourney', sans-serif;
 }
 
+
+/* Start button */
 #start {
     display: flex;
     justify-content: center;
@@ -147,6 +158,8 @@ footer {
     bottom: 5%;
 }
 
+
+/* Reset button */
 #reset {
     display: none;
     justify-content: center;
@@ -162,8 +175,8 @@ footer {
     bottom: 5%;
 }
 
-/*Arrow controls*/
 
+/*Arrow controls*/
 #controls {
     display: flex;
     flex-wrap: wrap;
@@ -189,132 +202,153 @@ button {
     padding: 0px 30px 0px 30px;
 }
 
+
+/* Media Queries */
 @media screen and (max-width: 650px) {
 
-/* Game area*/
-#game-area {
-    
-    overflow-x: hidden;
-    padding-bottom: 100px;
+    /* Game area*/
+    #game-area {
+
+        overflow-x: hidden;
+        padding-bottom: 100px;
+    }
+
+    .grid {
+        width: 280px;
+    }
+
+
+    /* Bricks */
+    .brick {
+        width: 50px;
+        height: 15px;
+        overflow: hidden;
+    }
+
+
+    /* Player / Slider*/
+    .slider {
+        width: 100px;
+        height: 15px;
+    }
+
+
+    /* Title */
+    .title {
+        font-size: 50px;
+    }
+
+
+    /* Subtitle */
+    .tagline {
+        font-size: 30px;
+    }
+
+
+    /* Score */
+    .score-text {
+        font-size: 30px;
+    }
+
+
+    /* footer */
+    footer {
+        overflow: hidden;
+    }
+
+
+    /* Social Media */
+    .socials {
+        display: flex;
+    }
+
+    .social-media {
+        text-align: center;
+        margin: auto;
+        padding: 0;
+    }
+
+    .social-media li {
+        display: inline;
+        margin: auto;
+
+    }
+
+    .social-media i {
+        color: #000000;
+
+    }
+
+
+    /* Copyright Footer Note */
+    .copyright {
+        color: #000000;
+        text-align: center;
+        margin: 0;
+        font-family: 'Tourney', sans-serif;
+    }
+
+    /* Start button */
+    #start {
+        display: flex;
+        justify-content: center;
+    }
+
+    .start-button {
+        background-color: #fc0000;
+        height: 60px;
+        width: auto;
+        font-family: 'Tourney', sans-serif;
+        font-size: 30px;
+        z-index: 100;
+        bottom: 5%;
+    }
+
+
+    /* Reset button */
+    #reset {
+        display: none;
+        justify-content: center;
+    }
+
+    .reset-button {
+        background-color: #fc0000;
+        height: 60px;
+        width: auto;
+        font-family: 'Tourney', sans-serif;
+        font-size: 30px;
+        z-index: 100;
+        bottom: 5%;
+    }
+
+
+    /*Arrow controls*/
+    #controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        color: red;
+        font-size: 100px;
+        z-index: 100;
+        padding-bottom: 50px;
+        margin-top: 450px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+
+    #left-control {
+        padding: 0px 30px 0px 30px;
+    }
+
+    #right-control {
+        padding: 0px 30px 0px 30px;
+    }
+
 }
-.grid {
-    width: 280px;
-}
 
-/* Bricks */
-.brick {
-    width: 50px;
-    height: 15px;
-    overflow: hidden;
-}
-
-
-/* Player / Slider*/
-.slider {
-    width: 100px;
-    height: 15px;
-}
-
-.title {
-    font-size: 50px;
-}
-
-.tagline {
-    font-size: 30px;
-}
-
-.score-text {
-    font-size: 30px;
-}
-
-footer {
-    overflow: hidden;
-}
-
-.socials {
-    display: flex;
-}
-
-.social-media {
-    text-align: center;
-    margin: auto;
-    padding: 0;
-}
-
-.social-media li {
-    display: inline;
-    margin: auto;
-
-}
-
-.social-media i {
-    color: #000000;
-
-}
-
-.copyright {
-    color: #000000;
-    text-align: center;
-    margin: 0;
-    font-family: 'Tourney', sans-serif;
-}
-
-#start {
-    display: flex;
-    justify-content: center;
-}
-
-.start-button {
-    background-color: #fc0000;
-    height: 60px;
-    width: auto;
-    font-family: 'Tourney', sans-serif;
-    font-size: 30px;
-    z-index: 100;
-    bottom: 5%;
-}
-
-#reset {
-    display: none;
-    justify-content: center;
-}
-
-.reset-button {
-    background-color: #fc0000;
-    height: 60px;
-    width: auto;
-    font-family: 'Tourney', sans-serif;
-    font-size: 30px;
-    z-index: 100;
-    bottom: 5%;
-}
-
-/*Arrow controls*/
-
-#controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    color: red;
-    font-size: 100px;
-    z-index: 100;
-    padding-bottom: 50px;
-    margin-top: 450px;
-}
-
-button {
-    all: unset;
-    cursor: pointer;
-    touch-action: manipulation;
-}
-
-#left-control {
-    padding: 0px 30px 0px 30px;
-}
-
-#right-control {
-    padding: 0px 30px 0px 30px;
-}
-
-}
+;
