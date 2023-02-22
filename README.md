@@ -57,7 +57,7 @@ Bright, retro style logo creates a memorable and easily remembered brand
 ## Testing 
 Testing throughout the development process ensured the functionality and flow gave both good UX and UI. Testing led to bugs in User movement being ironed out stopping 'jumpy' Slider movement, further increasing the UX. 
 
-As development moved to responsiveness, code refactoring, and bug fixes lead to media queries.  
+As development moved to responsiveness, media queries lead to code refactoring, and bug fixes .  
 
 - Browser tests on Chrome, Firefox and Safari
     - Note that older versions of safari do not support .webp image format
@@ -71,7 +71,7 @@ As development moved to responsiveness, code refactoring, and bug fixes lead to 
 
 
 ## Lighthouse report
-![Lighthouse Report](images/)
+![Lighthouse Report](assets/images/blokzlighthouse.webp)
 
 
 ## W3C html & CSS validator 
