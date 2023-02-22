@@ -67,7 +67,7 @@ function callMakeBrick(large) {
 makeBrick();
     }
 }
-let large = window.matchMedia("(min-width: 400px)")
+let large = window.matchMedia("(min-width: 650px)")
 callMakeBrick(large)
 large.addListener(callMakeBrick)
 
@@ -311,6 +311,6 @@ smallSlider();
 
 }
 
-let x = window.matchMedia("(max-width: 850px)")
+let x = window.matchMedia("(max-width: 650px)")
 smallScreen(x)
 x.addListener(smallScreen)
