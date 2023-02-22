@@ -232,7 +232,7 @@ function moveRight() {
 
 //Media Queries
 
-function myFunction(x) {
+function smallScreen(x) {
     if (x.matches) { // If media query matches
         document.getElementById('game-area').style.width = '310px'
         document.getElementById('game-area').style.height = '350px'
@@ -246,7 +246,7 @@ function myFunction(x) {
         // Slider Starting point
         sliderStart = [100, 10];
         sliderPosition = sliderStart;
-        sliderWidth = 100
+       
         // Ball
         ballWidth = 15;
         // Ball starting point
@@ -311,6 +311,6 @@ smallSlider();
 
 }
 
-let x = window.matchMedia("(max-width: 400px)")
-myFunction(x)
-x.addListener(myFunction)
+let x = window.matchMedia("(max-width: 600px)")
+smallScreen(x)
+x.addListener(smallScreen)
