@@ -3,12 +3,12 @@
 # [BLÖKZ](https://jonnydavison.github.io/blokz/)              
 [Visit Repository](https://github.com/JonnyDavison/blokz)
 
-## [BLÖKZ](https://jonnydavison.github.io/blokz/) Retro Arcade was created to bring you back top those early days in 2D gaming.
+## [BLÖKZ](https://jonnydavison.github.io/blokz/) Retro Arcade was created to bring you back to those early days in 2D gaming.
 
-Providing hours of fun in that familar retro style, or introducing a new generation to classic computer games such as BLÖKZ 
+Providing hours of fun in that familar retro style, or introducing a new generation to classic computer games such as BLÖKZ. The retro look and feel of this game is designed to give that nostalgic feeling of 1970s gaming!
 
 
-![Am I responsive image of BLÖKZ](images/XYZ.webp)
+![Am I responsive image of BLÖKZ](assets/images/blozkresponsive.webp)
 
 
 ## Project goals

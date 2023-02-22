@@ -62,9 +62,10 @@ function makeBrick() {
         grid.appendChild(brick);
     }
 }
+
 function callMakeBrick(large) {
     if (large.matches) {
-makeBrick();
+        makeBrick();
     }
 }
 let large = window.matchMedia("(min-width: 650px)")
@@ -246,7 +247,7 @@ function smallScreen(x) {
         // Slider Starting point
         sliderStart = [100, 10];
         sliderPosition = sliderStart;
-       
+
         // Ball
         ballWidth = 15;
         // Ball starting point
@@ -270,7 +271,7 @@ function smallScreen(x) {
             new brick(170, 220),
             new brick(225, 220),
         ];
-   
+
         function smallBrick() {
             for (let i = 0; i < bricks.length; i++) {
                 let brick = document.createElement('div');
@@ -280,12 +281,12 @@ function smallScreen(x) {
                 grid.appendChild(brick);
             }
         }
-        
+
         function makeSmallSlider() {
             slider.style.left = sliderStart[0] + 'px';
             slider.style.bottom = sliderStart[1] + 'px';
         }
-        
+
         function smallSlider(event) {
             switch (event.key) {
                 case 'ArrowLeft':
@@ -294,7 +295,7 @@ function smallScreen(x) {
                         makeSmallSlider();
                     }
                     break;
-        
+
                 case 'ArrowRight':
                     if (sliderStart[0] < gridWidth - 300) {
                         sliderStart[0] += 10;
@@ -303,11 +304,11 @@ function smallScreen(x) {
                     break;
             }
         }
-}
-smallBrick();
-makeSmallSlider();
-makeBall();
-smallSlider();
+    }
+    smallBrick();
+    makeSmallSlider();
+    makeBall();
+    smallSlider();
 
 }
 
