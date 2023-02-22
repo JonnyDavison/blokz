@@ -8,7 +8,7 @@
 Providing hours of fun in that familar retro style, or introducing a new generation to classic computer games such as BLÖKZ. The retro look and feel of this game is designed to give that nostalgic feeling of 1970s gaming!
 
 
-![Am I responsive image of BLÖKZ](assets/images/blozkresponsive.webp)
+![Am I responsive image of BLÖKZ](assets/images/blokzresponsive.webp)
 
 
 ## Project goals
@@ -21,17 +21,17 @@ Bright, retro style logo creates a memorable and easily remembered brand
 - Home Page (index.html)
     - Landing straight ready to play leaving the user only one click away from enjoying a game
     - Recogniseable immediatley any user will be able to understand and play
-![BLÖKZ Home Page](images/index.webp)    
+![BLÖKZ Home Page](assets/images/blokzindex.webp)    
 
 - Navigation
     - Kept to a simple one page site with bright red buttons using recogniseable icons, keeps the functionality and use easy
-![BLÖKZ buttons](images/buttons.webp)
+ ![BLÖKZ buttons](assets/images/playbutton.webp) ![](assets/images/resetbutton.webp)
 
 - The Footer 
     - Social Media links encouraging engagement, feedback, and a sense of community with other players. Opening on a new tab for easy user navigation
     - The © shows the ownership of the content and website
      
-        ![BLÖKZ Footer](images/blokzfooter.webp)
+        ![BLÖKZ Footer](assets/images/blokzfooter.webp)
 
 
 ## Technologies Used
@@ -57,7 +57,7 @@ Bright, retro style logo creates a memorable and easily remembered brand
 ## Testing 
 Testing throughout the development process ensured the functionality and flow gave both good UX and UI. Testing led to bugs in User movement being ironed out stopping 'jumpy' Slider movement, further increasing the UX. 
 
-As development moved to responsiveness, ****************************.  
+As development moved to responsiveness, code refactoring, and bug fixes lead to media queries.  
 
 - Browser tests on Chrome, Firefox and Safari
     - Note that older versions of safari do not support .webp image format
