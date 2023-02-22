@@ -346,7 +346,7 @@ function smallScreen(x) {
             }
         }
     }
-    // Calling functions
+    // Callin functions
     smallBrick();
     makeSmallSlider();
     makeBall();
