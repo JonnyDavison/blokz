@@ -215,6 +215,7 @@ button {
 
     .grid {
         width: 280px;
+        height: 200px;
     }
 
 
@@ -228,7 +229,7 @@ button {
 
     /* Player / Slider*/
     .slider {
-        width: 100px;
+        width: 50px;
         height: 15px;
     }
 

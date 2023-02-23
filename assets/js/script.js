@@ -271,40 +271,40 @@ function smallScreen(x) {
         // Grid
         grid = document.querySelector('.grid');
         gridWidth = 280;
-        gridHeight = 300;
+        gridHeight = 200;
 
         // Create Brick
         brickWidth = 50;
         brickHeight = 15;
 
         // Slider Starting point
-        sliderStart = [100, 10];
+        sliderStart = [125, 10];
         sliderPosition = sliderStart;
 
         // Ball diameter 
         ballWidth = 15;
 
         // Ball starting point
-        ballStart = [143, 30];
+        ballStart = [140, 30];
         ballPosition = ballStart;
 
         // X/Y co-ordinates for brick positioning on smaller grid
         bricks = [
-            new brick(5, 280),
-            new brick(60, 280),
-            new brick(115, 280),
-            new brick(170, 280),
-            new brick(225, 280),
-            new brick(5, 250),
-            new brick(60, 250),
-            new brick(115, 250),
-            new brick(170, 250),
-            new brick(225, 250),
-            new brick(5, 220),
-            new brick(60, 220),
-            new brick(115, 220),
-            new brick(170, 220),
-            new brick(225, 220),
+            new brick(5, 180),
+            new brick(60, 180),
+            new brick(115, 180),
+            new brick(170, 180),
+            new brick(225, 180),
+            new brick(5, 150),
+            new brick(60, 150),
+            new brick(115, 150),
+            new brick(170, 150),
+            new brick(225, 150),
+            new brick(5, 120),
+            new brick(60, 120),
+            new brick(115, 120),
+            new brick(170, 120),
+            new brick(225, 120),
         ];
 
 
