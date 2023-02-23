@@ -19,13 +19,14 @@ Bringing Gamers together through classic gaming
 Bright, retro-style logo creates a memorable and easily remembered brand 
 
 - Home Page (index.html)
-    - Landing straight ready to play leaving the user only one click away from enjoying a game
+    - Landing ready to play leaving the user only one click away from enjoying a game
     - Recognisable immediately any user will be able to understand and play
 ![BLÖKZ Home Page](assets/images/blokzindex.webp)    
 
 - Navigation
     - Kept to a simple one-page site with bright red buttons and using recognisable icons, keeps the functionality and user experience easy
- ![BLÖKZ buttons](assets/images/playbutton.webp) ![](assets/images/resetbutton.webp)
+
+         ![BLÖKZ buttons](assets/images/playbutton.webp) ![](assets/images/resetbutton.webp)
 
 - The Footer 
     - Social Media links encourage engagement, feedback, and a sense of community with other players. Opening on a new tab for easy user navigation
@@ -55,7 +56,7 @@ Bright, retro-style logo creates a memorable and easily remembered brand
 
 
 ## Testing 
-Testing throughout the development process ensured the functionality and flow gave both good UX and UI. Testing led to bugs in User movement being ironed out stopping 'jumpy' Slider movement, further increasing the UX. 
+Testing throughout the development process ensured the functionality and flow gave both good UX and UI. Testing led to bugs in User movement being ironed out stopping 'jumpy' Slider movement, further increasing the UX. Mobile testing lead to resizing the 'slider' and the 'grid' to ensure full functionality of the game. 
 
 As development moved to responsiveness, media queries lead to code refactoring, and bug fixes.  
 
@@ -111,10 +112,14 @@ Deployment method
 
 N.B - it may take a few minutes to build/deploy
 
-
+## Future Versions 
+Future versions to include
+- Lives
+    - A set number of lives as levels increase to allow the user a 2nd chance at winning  
+- Levels
+    - Different difficulty settings as you complete each round to increase difficulty. This could entail, making the ball faster, the 'slider' smaller, and a larger number of smaller blocks, alone and in combination. 
 
 ## Credits & Acknowledgements
-
 ### Code 
 Support and resources found at
 - [Stack Overflow](https://stackoverflow.com/)
