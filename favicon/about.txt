@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Tourney
+- Font Author: Copyright 2020 The Tourney Project Authors (https://github.com/Etcetera-Type-Co/Tourney)
+- Font Source: http://fonts.gstatic.com/s/tourney/v11/AlZa_ztDtYzv1tzq1wcJnbVt7xseomk-tNs7qrzTWbyt8n7GOQFyZTp1I1LcGA.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
