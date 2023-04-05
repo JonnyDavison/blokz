@@ -329,6 +329,7 @@ function smallScreen(x) {
 
         // Controls for slider in smaller grid 
         function smallSlider(event) {
+            if(this.item === undefined) {return}
             switch (event.key) {
                 case 'ArrowLeft':
                     if (sliderStart[0] > 0) {
