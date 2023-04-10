@@ -257,8 +257,6 @@ function moveRight() {
 }
 
 
-//Media Queries for screens below 650px
-
 // Small screen function to resize
 function smallScreen(x) {
 
@@ -309,7 +307,7 @@ function smallScreen(x) {
 
 
         // Create smaller bicks in new location
-        function smallBrick() {
+        let smallBrick = function () {
             for (let i = 0; i < bricks.length; i++) {
                 let brick = document.createElement('div');
                 brick.classList.add('brick');
@@ -317,19 +315,21 @@ function smallScreen(x) {
                 brick.style.bottom = bricks[i].bottomLeft[1] + 'px';
                 grid.appendChild(brick);
             }
-        }
+        };
 
 
         // Create slider in new position 
-        function makeSmallSlider() {
+        let makeSmallSlider = function () {
             slider.style.left = sliderStart[0] + 'px';
             slider.style.bottom = sliderStart[1] + 'px';
-        }
+        };
 
 
         // Controls for slider in smaller grid 
-        function smallSlider(event) {
-            if(this.item === undefined) {return}
+        let smallSlider = function (event) {
+            if (this.item === undefined) {
+                return;
+            }
             switch (event.key) {
                 case 'ArrowLeft':
                     if (sliderStart[0] > 0) {
@@ -345,7 +345,7 @@ function smallScreen(x) {
                     }
                     break;
             }
-        }
+        };
         // Callin functions
         smallBrick();
         makeSmallSlider();
