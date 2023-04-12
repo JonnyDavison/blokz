@@ -55,7 +55,7 @@
 }
 
 
-/* General */
+/* General Page conponents */
 body {
     background-color: #000000;
 }
@@ -97,7 +97,7 @@ footer {
     display: flex;
     justify-content: center;
 }
-
+/* Score Board */
 .score-text {
     font-family: 'Tourney', sans-serif;
     font-size: 45px;
