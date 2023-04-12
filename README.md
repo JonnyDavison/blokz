@@ -254,7 +254,7 @@ Future versions to include
 As the project was built there were many bugs during the development process, many of these were resolved quickly through research of the relevant documentation, Stack Overflow and W3Schools
 
 ### Known Bug
-There is a known bug becasue the app is deplyed throught GitHub. GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative creating the error in the console as below.
+There is a known bug becasue the app is deployed throught GitHub. GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative creating the error in the console as below.
 
 ![Google Error with Permission Policy](assets/images/googleerror.webp)
 
@@ -272,6 +272,23 @@ After extensive manual and automated testing all tests where passed. Initially T
 
 ## Credits 
 ### Code 
+The base game logic came from
+- [Ania Kubów You Tube](https://www.youtube.com/watch?v=3KWEud12Pxo)
+
+After further reserch the author found Aina's GitHub respository 
+- [Ania Kubów](https://github.com/kubowania/breakout)
+
+In the respository the MIT licence as below
+
+MIT Licence
+Copyright (c) 2020 Ania Kubow
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 Support and resources found at
 - [Stack Overflow](https://stackoverflow.com/)
 - [W3school](https://www.w3schools.com/)
@@ -280,5 +297,6 @@ Support and resources found at
 - [Free Code Camp](https://www.freecodecamp.org/)
 - [Stack Overflow](https://stackoverflow.com/)
 - [W3Schools](https://www.w3schools.com/)
+
 
 [Back to top ⇧](#blökz)
