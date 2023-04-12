@@ -1,12 +1,10 @@
-
-
 # BLÖKZ
 
 #### [Visit Live Site](https://jonnydavison.github.io/blokz/) / [Visit Repository](https://github.com/JonnyDavison/blokz)
 
 ## [BLÖKZ](https://jonnydavison.github.io/blokz/) Retro Arcade was created to bring you back to those early days in 2D gaming.
 
-Providing hours of fun in that familiar retro style, or introducing a new generation to classic computer games such as BLÖKZ. The retro look and design gives that nostalgic feeling of 1970s gaming!
+Providing hours of fun in that familiar retro style, or introducing a new generation to classic computer games such as BLÖKZ. The retro look and design give that nostalgic feeling of 1970s gaming!
 
 
 ![Am I responsive image of BLÖKZ](assets/images/blokzresponsive.webp)
@@ -47,19 +45,19 @@ Providing hours of fun in that familiar retro style, or introducing a new genera
 [Back to top ⇧](#blökz)
 
 ## Project Overview
-The development of 'BLÖKZ' is the a throwback to the early games that gave joy to and entertained millions. These games started so many young minds interest in computers and computer scinece as they wanted to learn to build and create games of their own. This has given rise to forward thinking and ever advancing gameing and technology indusrty. The Global gaming industry has an estimated worth of over $300 Billion, and every young gamer and developer has to start some where, this is why the author has creaeted BLÖKZ.
-There are built in features to assist and guide the user through the game:
+The development of 'BLÖKZ' is a throwback to the early games that gave joy to and entertained millions. These games started so many young minds' interest in computers and computer science as they wanted to learn to build and create games of their own. This has given rise to the forward-thinking and ever-advancing gaming and technology industry. The Global gaming industry has an estimated worth of over $300 Billion, and every young gamer and developer has to start somewhere, this is why the author has created BLÖKZ.
+There are built-in features to assist and guide the user through the game:
 
-- Highly recogniseable display
-- User feedback (on screen game responds to user input by click or keyboard)
+- Highly recognisable display
+- User feedback (on-screen game responds to user input by touch or keyboard)
 - Text spacing for user readability 
-- Score counting for the user can see their current socre
+- Score counting for the user can see their current points
 - Game Over / Winner displayed when the game is over
 
 ## Project Goals
 - Bringing Gamers together through classic gaming
 - Develop a Java Script Web App
-- Present the game in a clear and easy to understand manner
+- Present the game in a clear and easy-to-understand manner
 - Keep good UX principles regarding layout and interaction
 - Robust Java Script code without issues/bugs
 
@@ -68,7 +66,7 @@ There are built in features to assist and guide the user through the game:
 ## User Experience
 ### User Expectations
 - Able to quickly understand what the app is for 
-- Resposne to keypress or click
+- Response to a key press or a click
 - Playable on most screen sizes
 - No logic errors
 
@@ -76,32 +74,32 @@ There are built in features to assist and guide the user through the game:
 - I want to know what game is
 - I want to enjoy the UX
 - I want to be able to complete the game
-- I want to the GUI to respond to input (Keypress or Click)
+- I want the GUI to respond to input (Keypress or Click)
 - I want no bugs or issues in the program
 
 [Back to top ⇧](#blökz)
 
 ## Design
 ### Colour Scheme & Styling
-In order to give the authentic look and feel of a retro game the color palette was chosen. It was also important that the color palette has a high contrast to provide good UX and readability. It is important that the color palette is a combination of colors provided not only the visual foundation of the BLÖKZ brand, but to create a user interface that is aesthetically pleasing and enjoyable to use.
+To give the authentic look and feel of a retro game the color palette was chosen. It was also important that the color palette has a high contrast providing good UX and readability. It is important that the color palette is a combination of colors that not only provide the visual foundation of the BLÖKZ brand but create a user interface that is aesthetically pleasing and enjoyable to use.
 
 
 [Back to top ⇧](#blökz)
 ### Typography
-The fonts were imported from Google Fonts database.'Tourney' is used throughout the site, this matches both the stlye and readability criteria that the author had set. The back-up font incase the selected doesn't load is sans-serif.
+The fonts were imported from Google Fonts database. 'Tourney' is used throughout the site, this matches both the style and readability criteria that the author had set. The backup font in case the selected one doesn't load is 'sans-serif'.
 
 ### Imagery
-Icons where imported from [Font Awesome](https://fontawesome.com/) to create recognisable links and a smooth UX. 
+Icons were imported from [Font Awesome](https://fontawesome.com/) to create recognisable links and a smooth UX. 
 
 [Favicon.io](https://favicon.io/) used to create a Favicon for greater UX/UI.
 
 ### Structure
-- BLÖKZ is structured in a user friendly and easy to navigate way.
-- On laoding the user is greeted by a game that they can understand visually and instictivly know how to play
-- The Logo and title confrom with expectations and user stories
+- BLÖKZ is structured in a user-friendly and easy-to-navigate way.
+- On loading the user is greeted by a game that they can understand visually and instinctively know how to play
+- The Logo and title conform with expectations and user stories
 - The 'Play' button allows the user to start the game when they are ready, with an icon that visually assists the user
 - The 'Reset' button allows the user to re-start the game at any point, again with an icon that visually assists the user
-- If the User completes or looses the game there is a 'Winner' or 'Game Over' displayed along with the reset button to allow the user to restart and play again
+- If the User completes or loses the game there is a 'Winner' or 'Game Over' displayed along with the reset button to allow the user to restart and play again
 - The footer contains basic copyright and links to social media allowing the game to be shared and discussed with others
 
 [Back to top ⇧](#blökz)
@@ -173,13 +171,13 @@ In response to User stories.
 - I want to know what game is
     - Upon loading the logo the game is displayed as ready to play
 - I want to enjoy the UX
-    - The bright, high contrast design is both asethically pleaseing and has good readibility
+    - The bright, high-contrast design is both aesthetically pleasing and has good readability
 - I want to be able to complete the game
-    - The game is easy to navigaite and use making the game fun but doable
-- I want to the GUI to respond to input (Keypress or Click)
+    - The game is easy to navigate and use making the game fun but doable
+- I want the GUI to respond to input (Keypress or Click)
     - The buttons and functionality respond to the user input (Keypress or Click)
 - I want no bugs or issues in the program
-    - At this deployment there is no errors in the game logic or in the console. At this time, the author is unaware of any ways a 'normal' user could 'break' the program
+    - At this deployment, there are no errors in the game logic or the console. At this time, the author is unaware of any ways a 'normal' user could 'break' the program
 
 [Back to top ⇧](#blökz)
 
@@ -190,11 +188,11 @@ Manual testing led to bugs in User movement being ironed out stopping 'jumpy' Sl
 
 Manual Tests included
 - Browser tests on Chrome, Firefox and Safari
-    - Note that older versions of safari do not support .webp image format
+    - Note that older versions of Safari do not support .webp image format
 - Responsiveness tests, Chrome dev tools
     - Tests resulted in additional breakpoints
 -  Accessibility 
-    - All components meet accessibility expectations, contrast and readability 
+    - All components meet accessibility expectations, contrast, and readability 
 - External Links    
     - To further social media, open a separate tab to assist UX navigation
 
@@ -206,7 +204,7 @@ Manual Tests included
 ![Lighthouse Report](assets/images/blokzlighthouse.webp)
 
 
-### W3C html & CSS validator 
+### W3C HTML & CSS validator 
 JavaScript, HTML & CSS3 are all validated by the tools below.
 - [JavaScript Validation](https://jshint.com/)
 - [HTML Validation](https://validator.w3.org/nu/#textarea)
@@ -229,13 +227,13 @@ Valid CSS!
     </a>
 </p>
 
-### [JS Hint](https://jshint.com/)
+### [JS Hint](https://jshint.com/)
 
 [Back to top ⇧](#blökz)
 
 ### Accessibility
 #### Wave Accessibility Test
-The [Wave Accessibility Test](https://wave.webaim.org/) is powered by WebAIM and has displayed 0 errors when checking acceddibility standards 
+The [Wave Accessibility Test](https://wave.webaim.org/) is powered by WebAIM and has displayed 0 errors when checking accessibility standards 
 ![Wave Test](assets/images/wavereport.webp)
 
 
@@ -254,12 +252,12 @@ Future versions to include
 As the project was built there were many bugs during the development process, many of these were resolved quickly through research of the relevant documentation, Stack Overflow and W3Schools
 
 ### Known Bug
-There is a known bug becasue the app is deployed throught GitHub. GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative creating the error in the console as below.
+There is a known bug as the app is deployed through GitHub. GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative creating the error in the console as below.
 
 ![Google Error with Permission Policy](assets/images/googleerror.webp)
 
 ### Final Testing results
-After extensive manual and automated testing all tests where passed. Initially There was errors displayed in W3C HTML, W3C CSS and JsHint these where corrected and the tests re-ran.
+After extensive manual and automated testing, all tests were passed. Initially, there were errors displayed in W3C HTML, W3C CSS, and JsHint these were corrected and the tests were re-ran.
 
 | Automated Test     |  Pass / Fail  |
 | -----------------  | ------------- |
@@ -275,10 +273,10 @@ After extensive manual and automated testing all tests where passed. Initially T
 The base game logic came from
 - [Ania Kubów You Tube](https://www.youtube.com/watch?v=3KWEud12Pxo)
 
-After further reserch the author found Aina's GitHub respository 
+After further research, the author found Aina's GitHub repository 
 - [Ania Kubów](https://github.com/kubowania/breakout)
 
-In the respository the MIT licence as below
+In the repository the MIT license as below
 
 MIT Licence
 Copyright (c) 2020 Ania Kubow
