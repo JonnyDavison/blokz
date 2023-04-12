@@ -14,27 +14,31 @@
 
 <body>
     <header>
+        <!--Logo & Title-->
         <h1 class="title">BLÖKZ <i class="fa-solid fa-cubes"> </i></h1>
         <h2 class="tagline">Retro Arcade</h2>
         <br>
+        <!--Score Board-->
         <p class="score-text"> Score: <a href="scores" id="score">0</a></p>
     </header>
 
     <div id="start" class="start">
+        <!--Start Button -->
         <button name="start-button" onclick="startGame()" class="start-button" aria-label="startbutton">Play <i
                 class="fa-solid fa-play"></i></button>
     </div>
 
     <div id="reset" class="reset">
+        <!--Reset Button -->
         <button name="reset-button" onclick="resetGame()" class="reset-button" aria-label="resetbutton">Reset <i
                 class="fa-solid fa-arrow-rotate-left"></i></button>
     </div>
 
     <div id="game-area">
-
+        <!--The Game Area -->
         <div class="grid"></div>
 
-        <div id="controls">
+        <div id="controls"> <!--Control Buttons for touch screen or mouse clicks -->
             <div id="left-control">
                 <button name="left-control" class="controls" onclick="moveLeft()" aria-label="leftbutton"><i
                         class="fa-solid fa-arrow-left"></i></button>
@@ -51,7 +55,7 @@
 
     <footer>
         <div class="socials">
-            <ul class="social-media">
+            <ul class="social-media"> <!--Social Media icons and links -->
                 <li>
                     <a href="https://www.facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page (Opens a new tab)"><i class="fa-brands fa-facebook"></i></a>
@@ -67,9 +71,12 @@
                 </li>
             </ul>
         </div>
+        <!--Copyright ownership-->
         <p class="copyright">BLÖKZ© 2023</p>
     </footer>
+    <!--Link to script file -->
     <script src="assets/js/script.js"></script>
+    <!--Font Aweseome import-->
     <script src="https://kit.fontawesome.com/75b57bf907.js" crossorigin="anonymous"></script>
 </body>
 
