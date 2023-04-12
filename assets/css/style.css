@@ -55,7 +55,7 @@
 }
 
 
-/* General Page conponents */
+/* General Page components */
 body {
     background-color: #000000;
 }
@@ -323,7 +323,7 @@ button {
     }
 
 
-    /*Arrow controls*/
+    /* Arrow controls */
     #controls {
         display: flex;
         flex-wrap: wrap;
